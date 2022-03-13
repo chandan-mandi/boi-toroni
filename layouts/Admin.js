@@ -4,14 +4,11 @@ import React from 'react';
 import Sidebar from '../components/Sidebar/Sidebar';
 
 const Admin = ({children}) => {
-    const styles = {
-        display: "flex",
-        flexDirection: "row"
-      };
+    
     return (
-        <div>
+        <>
         <Sidebar />
-        <div className="relative ml-64 bg-gray-100">
+        <div className="relative md:ml-64 bg-gray-100">
           <AdminNavbar />
           {/* Header */}
           <HeaderStats />
@@ -20,7 +17,7 @@ const Admin = ({children}) => {
             {/* <FooterAdmin /> */}
           </div>
         </div>
-      </div>
+      </>
     );
 };
 

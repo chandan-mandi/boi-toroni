@@ -159,7 +159,7 @@ export default function Sidebar() {
               </li>
 
               <li className="items-center">
-                <Link href="/admin/maps">
+                <Link href="/admin/managingbooks">
                   <a
                     href="#pablo"
                     className={
@@ -177,7 +177,7 @@ export default function Sidebar() {
                           : "text-blueGray-300")
                       }
                     ></i>{" "}
-                    Maps
+                    Managing Books
                   </a>
                 </Link>
               </li>
