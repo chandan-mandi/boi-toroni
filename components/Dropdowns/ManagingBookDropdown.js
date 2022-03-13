@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 import toast, { Toaster } from 'react-hot-toast';
 
 
-const ManagingBookDropdown = () => {
+const ManagingBookDropdown = ({id}) => {
   const router = useRouter();
   const handleBookUpdate = (id) => {
     console.log(id);
@@ -69,13 +69,13 @@ const ManagingBookDropdown = () => {
                         leaveFrom="transform opacity-100 scale-100"
                         leaveTo="transform opacity-0 scale-95"
                       >
-                      <Menu.Items className="absolute right-14 w-32 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="absolute right-14 w-32 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
            
                       <div className="px-1 py-1">
                       <Menu.Item>
                         {({ active }) => (
                         <button
-                        onClick={() => handleBookUpdate("622dc44aa0639ce6dd019559")}
+                        onClick={() => handleBookUpdate(id)}
                         className={`${
                         active ? 'bg-violet-500 text-white' : 'text-gray-900'
                         } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
@@ -87,7 +87,7 @@ const ManagingBookDropdown = () => {
                       <Menu.Item>
                         {({ active }) => (
                         <button
-                          onClick={() => handleDeleteBook("622dc44aa0639ce6dd019559")}
+                          onClick={() => handleDeleteBook(id)}
                           className={`${
                           active ? 'bg-violet-500 text-white' : 'text-gray-900'
                           } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
