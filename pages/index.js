@@ -4,7 +4,8 @@ import Header from "components/Home/Header/Header";
 import Footer from "../components/Home/Footer/Footer";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({books}) {
+  console.log(books);
     return (
         <div className={styles.container}>
             <div>
@@ -13,7 +14,7 @@ export default function Home() {
             </div>
 
             <div>
-                <Books></Books>
+                <Books books={books}></Books>
             </div>
 
             <footer className={styles.footer}>
@@ -21,4 +22,13 @@ export default function Home() {
             </footer>
         </div>
     );
+}
+
+export async function getStaticProps() {
+  const response = await fetch("https://boitoroni.herokuapp.com/books");
+  const books = await response.json();
+
+  return {
+      props: {books}
+  }
 }
