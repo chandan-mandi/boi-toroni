@@ -1,10 +1,20 @@
-import Footer from "../components/Footer/Footer";
+import Banner from "components/Home/Banner/Banner";
+import Books from "components/Home/Books/Books";
+import Header from "components/Home/Header/Header";
+import Footer from "../components/Home/Footer/Footer";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
     return (
         <div className={styles.container}>
-            <h1 className="text-3xl font-bold underline">Hello world!</h1>
+            <div>
+                <Header></Header>
+                <Banner></Banner>
+            </div>
+
+            <div>
+                <Books></Books>
+            </div>
 
             <footer className={styles.footer}>
                 <Footer />
@@ -12,4 +22,3 @@ export default function Home() {
         </div>
     );
 }
-

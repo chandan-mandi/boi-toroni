@@ -3,7 +3,7 @@ import { userAccessToken, fetchUser } from '../Utils/fetchUserDetails';
 import { useRouter } from "next/router"
 import { IoLogOut } from 'react-icons/io5'
 
-const Index = () => {
+const Authentication = () => {
   const router = useRouter();
   const [user, setUser] = useState({});
 
@@ -47,4 +47,4 @@ const Index = () => {
   );
 }
 
-export default Index;
+export default Authentication;
