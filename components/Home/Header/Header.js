@@ -92,8 +92,13 @@ const Header = () => {
                             </a>
                         </Link>
                         <Link href="/about">
-                            <a className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold bg-amber-800 p-4">
+                            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 font-semibold bg-amber-800 p-4">
                                 ABOUT
+                            </a>
+                        </Link>
+                        <Link href="/admin/dashboard">
+                            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 font-semibold bg-amber-800 p-4">
+                                DASHBOARD
                             </a>
                         </Link>
                     </div>
