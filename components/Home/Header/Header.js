@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Header = () => {
     return (
@@ -7,32 +8,27 @@ const Header = () => {
             <nav className=" flex-wrap bg-stone-500 p-3">
                 <div className="w-full block flex-grow lg:flex lg:w-auto flex justify-start">
                     <div className="text-sm lg:flex-grow ml-20">
-                        <a
-                            href="#responsive-header"
-                            className="block mt-4 lg:inline-block lg:mt-0  font-semibold text-white mr-4"
-                        >
-                            Contact US
-                        </a>
+                        <Link href="/contact">
+                            <a className="block mt-4 lg:inline-block lg:mt-0  font-semibold text-white mr-4">
+                                Contact US
+                            </a>
+                        </Link>
                         <span className="block mt-4 lg:inline-block lg:mt-0  font-semibold text-white mr-4">
                             |
                         </span>
 
-                        <a
-                            href="#responsive-header"
-                            className="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 font-semibold"
-                        >
+                        <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 font-semibold">
                             FAQ
                         </a>
                     </div>
 
                     <div className="w-full block flex-grow lg:flex lg:w-auto ">
                         <div className="text-sm lg:flex-grow flex justify-end mr-20">
-                            <a
-                                href="#responsive-header"
-                                className="block mt-4 lg:inline-block lg:mt-0  font-semibold text-white mr-4 bg-amber-800 border-none rounded-lg tracking-wide p-1 "
-                            >
-                                Login/Register
-                            </a>
+                            <Link href="/login">
+                                <a className="block mt-4 lg:inline-block lg:mt-0  font-semibold text-white mr-4 bg-amber-800 border-none rounded-lg tracking-wide p-1 ">
+                                    Login/Register
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -80,24 +76,26 @@ const Header = () => {
                 </div>
                 <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div className="text-sm lg:flex-grow">
-                        <a
-                            href="#responsive-header"
-                            className="block mt-4 lg:inline-block lg:mt-0  font-semibold text-white mr-4 bg-amber-800 p-4"
-                        >
-                            HOME
-                        </a>
-                        <a
-                            href="#responsive-header"
-                            className="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 font-semibold bg-amber-800 p-4"
-                        >
-                            CATAGORIES
-                        </a>
-                        <a
-                            href="#responsive-header"
-                            className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold bg-amber-800 p-4"
-                        >
-                            CAREER
-                        </a>
+                        <Link href="/">
+                            <a className="block mt-4 lg:inline-block lg:mt-0  font-semibold text-white mr-4 bg-amber-800 p-4">
+                                HOME
+                            </a>
+                        </Link>
+                        <Link href="/books">
+                            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 font-semibold bg-amber-800 p-4">
+                                BOOKS
+                            </a>
+                        </Link>
+                        <Link href="/contact">
+                            <a className="block mt-4 lg:inline-block lg:mt-0 text-white mr-4 font-semibold bg-amber-800 p-4">
+                                CONTACT
+                            </a>
+                        </Link>
+                        <Link href="/about">
+                            <a className="block mt-4 lg:inline-block lg:mt-0 text-white font-semibold bg-amber-800 p-4">
+                                ABOUT
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </nav>
