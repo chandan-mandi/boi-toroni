@@ -8,7 +8,7 @@ const Admin = ({children}) => {
     return (
         <>
         <Sidebar />
-        <div className="relative md:ml-64 bg-gray-100">
+        <div className="relative md:ml-64 bg-gray-100 dashboard-children">
           <AdminNavbar />
           {/* Header */}
           <HeaderStats />

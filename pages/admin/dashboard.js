@@ -10,7 +10,6 @@ const Dashboard = () => {
         <div className="flex flex-wrap">
           <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
             {/* <CardLineChart /> */}
-            <h1>Hello from line chart Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, iure!</h1>
           </div>
           <div className="w-full xl:w-4/12 px-4">
             {/* <CardBarChart /> */}

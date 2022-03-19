@@ -1,15 +1,19 @@
 import { Menu, Transition } from "@headlessui/react";
 // import useAuth from '../../hooks/useAuth';
 import Image from "next/image";
+import {useRouter} from 'next/router';
 import React, { Fragment } from "react";
 
 const UserDropdown = () => {
+    const router = useRouter();
     const user = {
         displayName: "Chandan",
         photoURL: "https://i.ibb.co/dbg2G1Q/1642359447115-2.png",
     };
     // const { user, logOut } = useAuth();
-
+const handleLinkDashboard = () => {
+    router.push('/admin/dashboard')
+}
     return (
         <>
             <Menu as="div">
@@ -37,6 +41,20 @@ const UserDropdown = () => {
                 >
                     <Menu.Items className="absolute right-16 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="px-1 py-1">
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <button
+                                        onClick={handleLinkDashboard}
+                                        className={`${
+                                            active
+                                                ? "bg-violet-500 text-white"
+                                                : "text-gray-900"
+                                        } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
+                                    >
+                                        Dashboard
+                                    </button>
+                                )}
+                            </Menu.Item>
                             <Menu.Item>
                                 {({ active }) => (
                                     <button
